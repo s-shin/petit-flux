@@ -1,0 +1,42 @@
+{
+  "name": "petit-flux",
+  "version": "0.1.0",
+  "description": "Simple & Tiny Flux Framework.",
+  "repository": "https://github.com/s-shin/petit-flux",
+  "main": "lib/index.js",
+  "browser": "build/petit-flux.js",
+  "scripts": {
+    "test": "mocha --compilers js:espower-babel/guess",
+    "build-npm": "babel src -d lib -s inline",
+    "build-browser": "browserify src -d -s PetitFlux -t [ babelify --sourceMapRelative . ] -g uglifyify | derequire > build/petit-flux.js",
+    "build-browser-min": "browserify src -s PetitFlux -t babelify -g uglifyify -o build/petit-flux.min.js",
+    "build": "npm run build-npm && npm run build-browser && npm run build-browser-min"
+  },
+  "keywords": [
+    "flux"
+  ],
+  "author": "Shintaro Seki",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.0",
+    "derequire": "^2.0.0",
+    "eslint": "^0.24.1",
+    "espower-babel": "^3.2.0",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0",
+    "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "disposables": "^1.0.1",
+    "eventemitter3": "^1.1.1",
+    "lodash": "^3.10.0"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "build",
+    "lib"
+  ]
+}

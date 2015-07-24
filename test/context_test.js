@@ -1,5 +1,5 @@
 import assert from "power-assert";
-import Context from "../src/context";
+import Context from "../lib/context";
 
 describe("Context", () => {
 

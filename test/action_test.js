@@ -1,5 +1,5 @@
 import assert from "power-assert";
-import Action from "../src/action";
+import Action from "../lib/action";
 
 describe("Action", () => {
 

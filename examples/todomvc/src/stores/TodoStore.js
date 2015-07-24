@@ -17,7 +17,7 @@ const storage = {
     localStorage[this.KEY] = JSON.stringify(this.data);
   },
   prepare() {
-    this.data = JSON.parse(localStorage[this.KEY]);
+    this.data = JSON.parse(localStorage[this.KEY]) || {};
   }
 };
 

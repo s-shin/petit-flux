@@ -65,6 +65,7 @@ context.actions.math.add(100, 200);
 `Enum` is the utility class just like [keyMirror](https://github.com/facebook/react/blob/v0.13.3/src/vendor/key-mirror/keyMirror.js).
 
 ```js
+import {Enum} from "petit-flux";
 const foobar = new Enum(["foo", "BAR"]);
 assert(foobar.foo === "foo");
 assert(foobar.BAR === "BAR");
@@ -127,6 +128,7 @@ import {
 ## Examples
 
 * [TodoMVC by Petit Flux](examples/todomvc)
+  * http://s-shin.github.io/petit-flux/examples/todomvc/
 
 ## License
 

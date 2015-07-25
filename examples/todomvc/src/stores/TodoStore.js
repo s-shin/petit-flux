@@ -2,6 +2,7 @@ import T from "../constants/TodoConstants";
 import _ from "lodash";
 
 const storage = {
+  VERSION: 1,
   KEY: "todos-petit-flux",
   data: {},
   generateId() {
@@ -10,14 +11,20 @@ const storage = {
     return this.data.id;
   },
   init() {
-    this.data = {id: 0, todos: {}};
+    this.data = {version: this.VERSION, id: 0, todos: {}};
     this.persist();
   },
   persist() {
     localStorage[this.KEY] = JSON.stringify(this.data);
   },
   prepare() {
-    this.data = JSON.parse(localStorage[this.KEY]) || {};
+    if (!localStorage[this.KEY]) {
+      this.init();
+    }
+    this.data = JSON.parse(localStorage[this.KEY]);
+    if (this.data.version !== this.VERSION) {
+      this.init(); // should be migrated ideally
+    }
   }
 };
 

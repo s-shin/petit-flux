@@ -1,5 +1,5 @@
 import assert from "power-assert";
-import Enum from "../lib/enum";
+import Enum from "../src/enum";
 
 describe("Enum", () => {
 

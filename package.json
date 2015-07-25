@@ -3,14 +3,12 @@
   "version": "0.1.0",
   "description": "Simple & Tiny Flux Framework.",
   "repository": "https://github.com/s-shin/petit-flux",
-  "main": "lib/index.js",
-  "browser": "build/petit-flux.js",
+  "main": "build/petit-flux.js",
   "scripts": {
     "test": "mocha --compilers js:espower-babel/guess",
-    "build-npm": "babel src -d lib -s inline",
-    "build-browser": "browserify src -d -s PetitFlux -t [ babelify --optional runtime --sourceMapRelative . ] -g uglifyify | derequire > build/petit-flux.js",
-    "build-browser-min": "browserify src -s PetitFlux -t [ babelify --optional runtime ] -g uglifyify -o build/petit-flux.min.js",
-    "build": "npm run build-npm && npm run build-browser && npm run build-browser-min"
+    "build-debug": "browserify src -d -s PetitFlux -t [ babelify --optional runtime --sourceMapRelative . ] -g uglifyify | derequire > build/petit-flux.js",
+    "build-min": "browserify src -s PetitFlux -t [ babelify --optional runtime ] -g uglifyify -o build/petit-flux.min.js",
+    "build": "npm run build-debug && npm run build-min"
   },
   "keywords": [
     "flux"
@@ -37,7 +35,6 @@
     "package.json",
     "README.md",
     "LICENSE",
-    "build",
-    "lib"
+    "build"
   ]
 }

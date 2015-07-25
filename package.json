@@ -1,6 +1,6 @@
 {
   "name": "petit-flux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple & Tiny Flux Framework.",
   "repository": "https://github.com/s-shin/petit-flux",
   "main": "build/petit-flux.js",

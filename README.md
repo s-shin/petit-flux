@@ -5,7 +5,7 @@ Simple & Tiny Flux Framework.
 [![Build Status](https://travis-ci.org/s-shin/petit-flux.svg)](https://travis-ci.org/s-shin/petit-flux)
 [![license](https://img.shields.io/github/license/s-shin/isoproxy.svg)](https://github.com/s-shin/isoproxy/blob/master/LICENSE)
 
-[![NPM](https://nodei.co/npm/petit-flux.svg)](https://nodei.co/npm/petit-flux/)
+[![NPM](https://nodei.co/npm/petit-flux.png)](https://nodei.co/npm/petit-flux/)
 
 ## Install
 
